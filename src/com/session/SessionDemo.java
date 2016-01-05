@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,11 +28,19 @@ public class SessionDemo extends HttpServlet{
 		out.println("test session attributes<br/>");
 		
 		HttpSession session = request.getSession();
+		//session.setMaxInactiveInterval(30);
+		
+//		Cookie cookie = new Cookie("username", "haha");
+//		cookie.setMaxAge(30);
+//		response.addCookie(cookie);
+		
 		
 		if(session.isNew()) {
 			out.println("This is a new session.");
 		}else {
-			out.println("Welcome back!");
+			out.println("Welcome back! <br/>");
+			
+			out.println(session.getMaxInactiveInterval());
 		}
 		
 		

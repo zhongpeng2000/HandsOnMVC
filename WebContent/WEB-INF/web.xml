@@ -9,17 +9,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-
-  
   <listener>
-  	<listener-class>
+    <listener-class>
   		com.example.context.MyServletContextListener
   	</listener-class>
   </listener>
-  
   <context-param>
-  	<param-name>breed</param-name>
-  	<param-value>Great Dane</param-value>
+    <param-name>breed</param-name>
+    <param-value>Great Dane</param-value>
   </context-param>
-
+  <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
 </web-app>

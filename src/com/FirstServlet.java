@@ -50,8 +50,8 @@ public class FirstServlet extends HttpServlet{
 		
 
 		//String c = req.getParameter("color");
-		req.setAttribute("banana", "apple");
-		req.getRequestDispatcher("/WEB-INF/views/first.jsp").forward(req, resp);
+		request.setAttribute("banana", "apple");
+		request.getRequestDispatcher("/WEB-INF/views/first.jsp").forward(request, response);
 		
 				
 	}

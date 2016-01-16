@@ -12,10 +12,15 @@ public class FirstServlet extends HttpServlet{
 	//GET
 	//localhost:8080 => GET
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {		
 		
-		String c = req.getParameter("color");
+		//String c = req.getParameter("color");
 		req.setAttribute("banana", "apple");
 		req.getRequestDispatcher("/WEB-INF/views/first.jsp").forward(req, resp);
 		

@@ -35,7 +35,7 @@ public class BeerSelect extends HttpServlet {
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/form.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("views/form.jsp");
 		view.forward(request, response);
 		
 		
@@ -70,7 +70,7 @@ public class BeerSelect extends HttpServlet {
 		request.setAttribute("ServerPt", request.getServerPort() );
 		request.setAttribute("LocalPt", request.getLocalPort() );
 		request.setAttribute("RemotePt", request.getRemotePort() );
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/result.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/views/result.jsp");
 		view.forward(request, response);
 		
 	}
